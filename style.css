@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+    font-family: 'Candara', sans-serif;
+}
+
+.score{
+    color: rgb(255, 249, 159);
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score h2{
+    font-size: 30px;
+}
+
+.score p {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.intro{
+    padding-left: 7%;
+    padding-right: 7%;
+    color: bisque;
+    font-weight: bold;
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+
+.intro h1{
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+
+.intro button,
+.match button{
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: rgb(43, 43, 43);
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    background-color: rgb(255, 249, 159);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.match{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.match h2{
+    font-weight: 500;
+}
+
+.options{
+    padding-top: 10%;
+}
+
+.winner{
+    color: bisque;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hands, 
+.options{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.player-hand{
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 1110px){
+    .match button{
+        width: 125px;
+        font-size: 17,5px;
+    }
+    
+}
+
+@media (max-width: 915px){
+    .match button{
+        width: 150px;
+    }
+    .lizard{
+        position: absolute;
+        bottom: -25%;
+        left: 20%;
+    }
+    .spock{
+        position: absolute;
+        bottom: -25%;
+        right: 20%;
+    }
+}
+
+@media (max-width: 720px){
+    .match button{
+        width: 125px;
+        font-size: 17,5px;
+    }
+    .lizard{
+        position: absolute;
+        bottom: -25%;
+        left: 17%;
+    }
+    .spock{
+        position: absolute;
+        bottom: -25%;
+        right: 17%;
+    }
+    
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakePlayer {
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    10%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    20%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    30%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    40%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    60%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    70%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    80%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    90%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComputer {
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateY(-50px);
+    }
+    20%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(-50px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(-50px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+    90%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
