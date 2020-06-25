@@ -12,7 +12,22 @@ const game = ()=> {
             introScreen.classList.add("fadeOut");
             match.classList.add("fadeIn");
         });
-    };;
+    };
+
+    //Get the rules
+    const readRules = ()=> {
+        const rulesBtn = document.querySelector('.rules-icon');
+        const rulesTxt = document.querySelector('.rules-text');
+
+        rulesBtn.addEventListener('mouseenter', ()=> {
+            rulesTxt.classList.add("fadeInAlmost");
+        });
+
+        rulesBtn.addEventListener('mouseleave', ()=> {
+            rulesTxt.classList.remove("fadeInAlmost");
+            rulesTxt.classList.add("fadeOut");
+        });
+    };
 
     //Play a match
     const playMatch = ()=> {
@@ -53,9 +68,7 @@ const game = ()=> {
                 playerHand.style.animation = "shakePlayer 1s ease";
                 computerHand.style.animation = "shakeComputer 1s ease";
             });
-
         });
-
     };
 
     const updateScore = ()=> {
@@ -68,11 +81,13 @@ const game = ()=> {
     const compareHands = (playerChoice, computerChoice)=> {
         //Update text
         const winner = document.querySelector('.winner');
+
         //Checking for a tie
         if(playerChoice == computerChoice){
             winner.textContent = "It's a tie";
             return;
         }
+
         //Check for Rock
         if(playerChoice === 'rock'){
             if(computerChoice == 'scissors'){
@@ -216,6 +231,7 @@ const game = ()=> {
 
     //Call all inner functions
     startGame();
+    readRules();
     playMatch();
 };
 

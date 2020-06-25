@@ -42,6 +42,52 @@ section{
     transition: opacity 0.5s ease;
 }
 
+.rules-icon{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: bisque;
+    border-radius: 100px;
+    align-items: center;
+}
+.rules-icon img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    height: 100%;
+}
+
+.rules-text{
+    height: 500px;
+    width: 450px;
+    padding: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: bisque;
+    border-radius: 3px;
+    border-style: double;
+    border-color: rgb(27, 27, 27);
+    border-width: 1px;
+    align-items: center;
+    font-family: 'Candara', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rules-icon:hover {
+    background-color: rgb(27, 27, 27);
+}
+
 .intro h1{
     font-size: 50px;
     font-weight: lighter;
@@ -136,6 +182,9 @@ section{
         bottom: -25%;
         right: 17%;
     }
+    .rules-text{
+        width: 80%;
+    }
     
 }
 
@@ -146,6 +195,11 @@ div.fadeOut{
 
 div.fadeIn{
     opacity: 1;
+    pointer-events: all;
+}
+
+div.fadeInAlmost{
+    opacity: 90%;
     pointer-events: all;
 }
 
