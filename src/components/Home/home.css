@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+    font-family: 'Candara', sans-serif;
+}
+
+.intro{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: bisque;
+    font-weight: bold;
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+
+.intro h1{
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.select-type{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+    align-items: center;
+}
+
+.select-type h2{
+    color: bisque;
+    font-weight: 500;
+    text-align: center; 
+    font-size: 50px;
+}
+
+.select-type .game-mode{
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.select-type button{
+    width: 150px;
+    height: 100px;
+    padding: 5%;
+    background: none;
+    border: none;
+    color: rgb(43, 43, 43);
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    background-color: rgb(255, 249, 159);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.intro button{
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: rgb(43, 43, 43);
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    background-color: rgb(255, 249, 159);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
