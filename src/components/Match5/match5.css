@@ -87,6 +87,28 @@ section{
     background-color: rgb(27, 27, 27);
 }
 
+.audio-options div{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: bisque;
+    border-radius: 100px;
+    align-items: center;
+}
+.audio-options img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17%;
+    margin-bottom: auto;
+}
+
+.audio-options div:hover {
+    background-color: rgb(27, 27, 27);
+}
+
 .match-5 button{
     width: 150px;
     height: 50px;

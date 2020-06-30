@@ -1,3 +1,4 @@
+//images
 import rock from "../assets/rock.png"
 import paper from "../assets/paper.png"
 import scissors from "../assets/scissors.png"
@@ -5,14 +6,46 @@ import lizard from "../assets/lizard.png"
 import spock from "../assets/spock.png"
 
 
+//audios
+import win from "../audio/win.mp3"
+import loose from "../audio/loose.mp3"
+import tie from "../audio/tie.mp3"
+
+
+
 function playMatch5() {
 
     let pScore = 0;
     let cScore = 0;
+    var audio;
+    let volume = 0.5;
+
     //Get the playfield
     const playfield = document.querySelector('.Match5');
     playfield.classList.remove("fadeOut");
     playfield.classList.add("fadeIn");
+
+    
+    //Mute function
+    const mute = ()=> {
+        const muteBtn = document.querySelector('.mute');
+        const unmuteBtn = document.querySelector('.unmute');
+
+        muteBtn.addEventListener('click', ()=>{
+            volume = 0;
+            muteBtn.classList.remove('fadeIn');
+            muteBtn.classList.add('fadeOut');
+            unmuteBtn.classList.remove('fadeOut');
+            unmuteBtn.classList.add('fadeIn');
+        });
+        unmuteBtn.addEventListener('click', ()=>{
+            volume = 0.5
+            unmuteBtn.classList.remove('fadeIn');
+            unmuteBtn.classList.add('fadeOut');
+            muteBtn.classList.remove('fadeOut');
+            muteBtn.classList.add('fadeIn');
+        });
+    }
 
     //Get the rules
     const readRules = ()=> {
@@ -112,6 +145,9 @@ function playMatch5() {
         //Checking for a tie
         if(playerChoice === computerChoice){
             winner.textContent = "It's a tie 😳";
+            audio = new Audio(tie);
+            audio.play();
+            audio.volume = volume;
             return;
         }
 //Check for Rock
@@ -119,24 +155,36 @@ function playMatch5() {
             if(computerChoice === 'scissors'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice === 'lizard'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice === 'paper'){
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else {
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
@@ -147,24 +195,36 @@ function playMatch5() {
             if(computerChoice ==='rock'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='spock'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='scissors'){
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else {
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
@@ -175,24 +235,36 @@ function playMatch5() {
             if(computerChoice ==='paper'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='lizard'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='rock'){
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else {
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
@@ -203,24 +275,36 @@ function playMatch5() {
             if(computerChoice ==='paper'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='spock'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='rock'){
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else {
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
@@ -231,24 +315,42 @@ function playMatch5() {
             if(computerChoice ==='scissors'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='rock'){
                 winner.textContent = "Player wins 🔥";
                 pScore++;
+                audio = new Audio(win);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else if(computerChoice ==='paper'){
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
             else {
                 winner.textContent = "Computer wins 😩";
                 cScore++;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
+                audio = new Audio(loose);
+                audio.play();
+                audio.volume = volume;
                 updateScore();
                 return;
             }
@@ -257,6 +359,7 @@ function playMatch5() {
     };
 
     //Call all inner functions
+    mute();
     readRules();
     playMatch();
 

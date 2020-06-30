@@ -6,7 +6,8 @@ import playMatch5 from './match5-app';
 //images
 import back from "../back.png"
 import rock from "../assets/rock.png"
-
+import mute from "../audioicons/mute.png"
+import unmute from "../audioicons/unmute.png"
 
 function Match5() {
     return (
@@ -34,22 +35,28 @@ function Match5() {
             <div className="rules-icon">
               <img src="https://image.flaticon.com/icons/svg/151/151917.svg" alt="" height="25px"/>
             </div>
-            <div className="rules-text">
-              <h1>RULES</h1>
+            <div className = "side-options">
+              <div className="rules-text">
+                <h1>RULES</h1>
                 <h4>Rock Paper Scissors Lizard Spock</h4>
-              <hr/>
-              <p className="rules-content">
-                    Scissors cuts Paper         <br/>
-                    Paper covers Rock           <br/>
-                    Rock crushes Lizard         <br/>
-                    Lizard poisons Spock        <br/>
-                    Spock smashes Scissors      <br/>
-                    Scissors decapitates Lizard <br/>
-                    Lizard eats Paper           <br/>
-                    Paper disproves Spock       <br/>
-                    Spock vaporizes Rock        <br/>
-                    Rock crushes Scissors       <br/>
-              </p>
+                <hr/>
+                <p className="rules-content">
+                  Scissors cuts Paper         <br/>
+                  Paper covers Rock           <br/>
+                  Rock crushes Lizard         <br/>
+                  Lizard poisons Spock        <br/>
+                  Spock smashes Scissors      <br/>
+                  Scissors decapitates Lizard <br/>
+                  Lizard eats Paper           <br/>
+                  Paper disproves Spock       <br/>
+                  Spock vaporizes Rock        <br/>
+                  Rock crushes Scissors       <br/>
+                </p>
+              </div>
+              <div className = 'audio-options'>
+                <div className = 'mute fadeIn'><img src={mute} alt="x" height="25px"/></div>
+                <div className = 'unmute fadeOut'><img src={unmute} alt="o" height="25px"/></div>
+              </div>
             </div>
             <h2 className="winner">Choose an option</h2>
             <div className="hands">
